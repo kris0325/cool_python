@@ -53,12 +53,13 @@ def join_clo(file= 'file.xlsx',colnameindex=0,by_name=u'Sheet1'):
     for i in range(0,nrows):
          # row =  table.row_values(i)
          # newrow = str(row)
-         for j in range(0,ncols):
-             app = []
-             newcell =  str(table.cell_value(i,j))
-             app.append(newcell)
-             print joinstr.join(newcell)
-         lists.append(app)
+         #for j in range(0,ncols):
+           
+             newcell = 'P'+ str(table.cell_value(i,0)) + '_'+ 'I'+ str(table.cell_value(i,1))
+             print newcell
+             # app.append(newcell)
+             # print joinstr.join(newcell)
+         # lists.append(app)
 
 def main():
   join_clo()
